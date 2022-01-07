@@ -4,37 +4,21 @@ import 'package:fcm_automate/model/article.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
-
 enum ArticlesState { Loading, Loaded, Error }
-class ArticleProvider extends ChangeNotifier{
 
+class ArticleProvider extends ChangeNotifier {
   List<Article> _genList = [];
-
-
-
 
   List<Article> get genList {
     return [..._genList];
   }
 
-
-
-
-
   List<Article> categoryList({required String category}) {
     print(category);
 
     switch (category) {
-
-
-
-
       case 'general':
         return [..._genList];
-
-
-
-
 
       default:
         return [..._genList];
@@ -50,13 +34,14 @@ class ArticleProvider extends ChangeNotifier{
     String country = "in",
   }) async {
     Uri url = Uri.parse(
-        'https://raw.githubusercontent.com/prakasharyaman/NewpaperNews-API/main/top-headlines/category/$category/$country.json');
+        "https://raw.githubusercontent.com/prakasharyaman/NewpaperNews-API/main/top-headlines/category/general/in.json");
 
     List<Article> tempList = [];
+
     try {
       var response = await http.get(url);
       Map<String, dynamic> result =
-      json.decode(response.body) as Map<String, dynamic>;
+          json.decode(response.body) as Map<String, dynamic>;
 
       //  print(json.decode(response.body));
 

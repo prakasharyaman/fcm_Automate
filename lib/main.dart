@@ -1,7 +1,9 @@
 import 'package:fcm_automate/provider/articleprovider.dart';
+import 'package:fcm_automate/provider/fcmprovider.dart';
 import 'package:fcm_automate/screen/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,6 +18,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => ArticleProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => FcmProvider(),
         ),
       ],
       child: MaterialApp(
