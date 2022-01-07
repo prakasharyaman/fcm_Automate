@@ -11,7 +11,7 @@ class FcmProvider extends ChangeNotifier {
   Map<String, String> header = {
     'Content-Type': 'application/json',
     'Authorization':
-        'key=AAAA1d-fCDw:APA91bFnHBECJfEHCYpBvvd4VaA60jMHEZEmFJ06WGk654l-gXVOFO-1GAMLT8EOx0qKKCsvkScFvmMaCeF78n7uLS9fUDsmqGNu',
+        'key=AAAA1d-fCDw:APA91bFR58y9XdX5aRXEahR_CqjGUM19CIoY7nF_HjxcGFXnHBECJfEHCYpBvvd4VaA60jMHEZEmFJ06WGk654l-gXVOFO-1GAMLT8EOx0qKKCsvkScFvmMaCeF78n7uLS9fUDsmqGNu',
   };
   Map<String, dynamic> body = {
     "to": "/topics/news",
